@@ -1,5 +1,7 @@
 package snake;
 
+import basics.Student1;
+
 public class Snake {
 	
 	/**
@@ -12,7 +14,9 @@ public class Snake {
 	 * 1 = east, 2 = west, 3 = north, 4 = south
 	 * @param direction
 	 */
-	public void turn(int direction) {}
+	public void turn(int direction) {
+		Student1.calculateAverage(15, 25, 35);
+	}
 	/**
 	 * Snake eats the food and grows
 	 */
