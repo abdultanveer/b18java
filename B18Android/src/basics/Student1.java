@@ -15,7 +15,7 @@ public class Student1 {
 	}
 	
 	
-	public Student1(int rollNo, String name) {//sravan
+	public Student1(int r, String n) {//sravan
 		//super();
 		System.out.println("constructor is invoked");
 		this.rollNo = rollNo;
