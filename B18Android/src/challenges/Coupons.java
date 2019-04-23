@@ -1,6 +1,7 @@
 package challenges;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Coupons {
@@ -16,20 +17,15 @@ public class Coupons {
 		//if the coupon's category is not there in the preferredcategories list
 		// then remove that coupon
 		for(Coupon c : couponsList) {
-			for(String s : preferredCategories) {
-				if(c.category.equals(s)) {}
-				else {
-					couponsList.remove(c);
-				}
-			}
+			if(!preferredCategories.contains(c.category)) 
+			couponsList.remove(c);
 		}
+		//System.out.println(couponsList.get(0).category);
 		
 	}
 	
 	public static void displayCoupons() {
-		for(Coupon c : couponsList) {
-			System.out.println("category ="+c.category);
-		}
+		System.out.println(couponsList.get(0).category);
 	}
 	
 	
@@ -38,6 +34,7 @@ public class Coupons {
 	public static void main(String[] args) {
 			createDummyData();
 			filterCategories();
+			displayCoupons();
 	}
 	
 	public static void createDummyData() {
@@ -53,7 +50,7 @@ public class Coupons {
 		Coupon  c1 = new Coupon("304816683327672908,39385271820845634478,Gift Cards,17.72,6.61");
 		Coupon  c2 = new Coupon("6683414238680399,96520119728644480082,Appliances,17.34,3.13");
 
-		couponsList = new ArrayList<Coupon>();
+		couponsList = new LinkedList<Coupon>();
 		couponsList.add(c1);
 		couponsList.add(c2);
 
